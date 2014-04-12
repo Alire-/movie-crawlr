@@ -1,3 +1,4 @@
+import os
 from scrapy.spider import Spider
 from scrapy.selector import Selector
 
@@ -6,9 +7,12 @@ from imdb.items import ImdbItem
 class ImdbSpider(Spider):
     name = "imdb"
     allowed_domains = ["imdb.com"]
+    path = os.path.join(os.path.dirname(__file__), "../movie_url.txt")
+    f = open(path, 'r')
+    text = f.readline()
+    url = text.strip()
     start_urls = [
-        "http://www.imdb.com/title/tt0412142/",
-        "http://www.imdb.com/title/tt0918927/"
+        url
     ]
 
     def parse(self, response):
@@ -22,5 +26,3 @@ class ImdbSpider(Spider):
         item['broadcast_date'] = sel.xpath('//div[@id="titleDetails"]/div/h4[text()="Release Date:"]/../text()').extract()
         item['production_company'] = sel.xpath('//div[@id="titleDetails"]/div/h4[text()="Production Co:"]/../span/a/span/text()').extract()
         return item
-
-
