@@ -18,17 +18,13 @@ Link: [http://movie-crawlr.herokuapp.com](http://movie-crawlr.herokuapp.com).
 * Display a twitter stream with the search query as input, along with the movie metadata.
 
 ## Problems and bugs encountered
-1. Could not install Scrapy in `virtualenv`:  
-```
-distutils.errors.DistutilsError: Setup script exited with error: command 'cc' failed with exit status 1
-```
-[Found a solution on Stack Overflow](http://stackoverflow.com/questions/22703393/clang-error-unknown-argument-mno-fused-madd-wunused-command-line-argumen).  
-2. Accidentally adding venv to git:  
-Fixed using `git reset HEAD^`.  
-3. Pushing to Heroku:  
-```
-Encountered error: distutils.errors.DistutilsError: Setup script exited with error: command 'gcc' failed with exit status 1
-```
-[Found a solution on Stack Overflow](http://stackoverflow.com/questions/22415725/problems-with-custom-libffi-heroku-buildpack).  
-4. Bash script could not run on Heroku:  
-Substituted `wget` with `curl` in get_imdb_url.sh.
+1. Could not install Scrapy in `virtualenv`  
+  * ```error: distutils.errors.DistutilsError: Setup script exited with error: command 'cc' failed with exit status 1```
+  * [Solution on Stack Overflow](http://stackoverflow.com/questions/22703393/clang-error-unknown-argument-mno-fused-madd-wunused-command-line-argumen)  
+2. Accidentally adding venv to git  
+  * Fixed using `git reset HEAD^`  
+3. Pushing to Heroku  
+  * ```error: distutils.errors.DistutilsError: Setup script exited with error: command 'gcc' failed with exit status 1```
+  * [Solution on Stack Overflow](http://stackoverflow.com/questions/22415725/problems-with-custom-libffi-heroku-buildpack)  
+4. Bash script could not run on Heroku  
+  * Substituted `wget` with `curl` in get_imdb_url.sh
