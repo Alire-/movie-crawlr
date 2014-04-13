@@ -33,6 +33,13 @@ p {
   background-color: #f5f5f5;
 }
 
+#img-movie-not-found {
+    margin-bottom: 10px;
+}
+
+#form-movie-not-found {
+    margin-bottom: 20px;
+}
 .container .credit {
   margin: 10px 0;
 }

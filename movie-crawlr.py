@@ -12,11 +12,11 @@ def hello():
 def process_search_query():
     movie_title = request.args.get('movie_title')
     if (movie_title == ""):
-        return "Please entry a movie title!"
+        return render_template('movienotfound.html')
     movie_title = movie_title.lower()
     print "MOVIE TITLE", movie_title
     if not crawl_for_movie(movie_title):
-        return "Movie not found!"
+        return render_template('movienotfound.html')        
     casts, prod_co, sypnosis, broadcast_date, title, imdb_url = read_metadata(movie_title)
     return render_template('metadata.html', movie_title=title,
                            sypnosis=sypnosis, broadcast_date=broadcast_date,
