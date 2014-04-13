@@ -17,7 +17,8 @@ def process_search_query():
         return "Please entry a movie title!"
     movie_title = movie_title.lower()
     print "MOVIE TITLE", movie_title
-    crawl_for_movie(movie_title)
+    if not crawl_for_movie(movie_title):
+        return "Movie not found!"
     casts, prod_co, sypnosis, broadcast_date, title = read_metadata(movie_title)
     return render_template('metadata.html', movie_title=title,
                            sypnosis=sypnosis, broadcast_date=broadcast_date,
@@ -29,8 +30,11 @@ def crawl_for_movie(movie_title):
         os.remove('movie.json')
     f = open('./imdb/movie_url.txt')
     imdb_url = f.read()
+    if "False" in imdb_url:
+        return False
     print "IMDB URL: ", imdb_url
     call(["scrapy", "crawl", "imdb", "-o", "movie.json", "-t", "json"])
+    return True
 
 def write_movie_url(movie_title):
     omdb_url = get_omdb_url(movie_title)
