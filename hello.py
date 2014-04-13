@@ -19,10 +19,10 @@ def process_search_query():
     print "MOVIE TITLE", movie_title
     if not crawl_for_movie(movie_title):
         return "Movie not found!"
-    casts, prod_co, sypnosis, broadcast_date, title = read_metadata(movie_title)
+    casts, prod_co, sypnosis, broadcast_date, title, imdb_url = read_metadata(movie_title)
     return render_template('metadata.html', movie_title=title,
                            sypnosis=sypnosis, broadcast_date=broadcast_date,
-                           casts=casts, prod_co=prod_co)
+                           casts=casts, prod_co=prod_co, imdb_link=imdb_url)
 
 def crawl_for_movie(movie_title):
     write_movie_url(movie_title)
@@ -61,7 +61,9 @@ def read_metadata(movie_title):
     sypnosis = data[0]["sypnosis"]
     broadcast_date = data[0]["broadcast_date"][1]
     title = data[0]["title"]
-    return casts[:-1], prod_co[0], sypnosis[0], broadcast_date, title[0]
+    f = open('./imdb/movie_url.txt')
+    imdb_url = f.read()
+    return casts[:-1], prod_co[0], sypnosis[0], broadcast_date, title[0], imdb_url
 
 if __name__ == '__main__':
     app.run(debug=True)
