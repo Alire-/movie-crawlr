@@ -13,6 +13,7 @@ Link: [http://movie-crawlr.herokuapp.com](http://movie-crawlr.herokuapp.com).
 * [Jinja Template Designer Documentation](http://jinja.pocoo.org/docs/templates/)
 * [Bootstrap CSS](http://getbootstrap.com/css/)
 * [Google Python Style Guide](http://google-styleguide.googlecode.com/svn/trunk/pyguide.html)
+* [The Open Movie Database API](http://www.omdbapi.com/): Used this to get IMDb's movie id for queried movies.
 
 ## Potential add-ons
 * Display a twitter stream with the search query as input, along with the movie metadata.

@@ -32,8 +32,11 @@ def read_metadata(movie_title):
     json_data.close()
 
     cast_information = data[0]["cast_information"]
-    casts = ', '.join(cast_information)
-    casts = casts
+    if not cast_information:
+        casts = ""
+    else:
+        casts = ', '.join(cast_information)
+        casts = casts
 
     prod_co = data[0]["production_company"]
     if not prod_co:
@@ -46,8 +49,14 @@ def read_metadata(movie_title):
         sypnosis = ""
     else:
         sypnosis = sypnosis[0]
-    broadcast_date = data[0]["broadcast_date"][1]
+
+    broadcast_date = data[0]["broadcast_date"]
+    if not broadcast_date:
+        broadcast_date = ""
+    else:
+        broadcast_date = broadcast_date[1]
     title = data[0]["title"]
+
     if not title:
         title = ""
     else:
