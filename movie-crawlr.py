@@ -56,7 +56,7 @@ def read_metadata(movie_title):
 
     cast_information = data[0]["cast_information"]
     casts = ', '.join(cast_information)
-    casts = casts[:-1]
+    casts = casts
 
     prod_co = data[0]["production_company"]
     if not prod_co:
