@@ -1,9 +1,9 @@
 Movie-crawlr
 ============
 
-A web application that returns a movie's or TV series' metadata given its title. Built this to learn how to use [Scrapy](http://scrapy.org), [Flask](http://flask.pocoo.org), and [Heroku](https://www.heroku.com) proper.
+A web application that returns a movie's or TV series' IMDb etadata given its title. Built this to learn and gain familiarity with [Scrapy](http://scrapy.org), [Flask](http://flask.pocoo.org), and [Heroku](https://www.heroku.com).
 
-Link: [http://movie-crawlr.herokuapp.com](http://movie-crawlr.herokuapp.com).
+[http://movie-crawlr.herokuapp.com](http://movie-crawlr.herokuapp.com)
 
 ## How it works
 ## References
@@ -13,6 +13,7 @@ Link: [http://movie-crawlr.herokuapp.com](http://movie-crawlr.herokuapp.com).
 * [Jinja Template Designer Documentation](http://jinja.pocoo.org/docs/templates/)
 * [Bootstrap CSS](http://getbootstrap.com/css/)
 * [Google Python Style Guide](http://google-styleguide.googlecode.com/svn/trunk/pyguide.html)
+* [XPath](http://www.w3.org/TR/xpath/)
 * [The Open Movie Database API](http://www.omdbapi.com/) - used this to get IMDb's movie id for queried movies.
 
 ## Potential add-ons
