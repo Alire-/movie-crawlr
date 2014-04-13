@@ -3,4 +3,4 @@
 #!/bin/bash
 URL=$1
 echo "http://www.imdb.com/title/" | tr -d '\n' > ./imdb/movie_url.txt
-wget $URL -qO- | tr -d '/r' | tr -d '/n' |  sed 's/.*imdbID\"\:\"//g' | sed 's/\"\,\".*//g' >> ./imdb/movie_url.txt
+curl $URL | tr -d '/r' | tr -d '/n' |  sed 's/.*imdbID\"\:\"//g' | sed 's/\"\,\".*//g' >> ./imdb/movie_url.txt
