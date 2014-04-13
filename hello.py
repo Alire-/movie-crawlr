@@ -53,17 +53,31 @@ def read_metadata(movie_title):
     json_data = open('movie.json')
     data = json.load(json_data)
     json_data.close()
+
     cast_information = data[0]["cast_information"]
     casts = ', '.join(cast_information)
-    # for cast in cast_information:
-    #     casts += cast + ', '
+    casts = casts[:-1]
+
     prod_co = data[0]["production_company"]
+    if not prod_co:
+        prod_co = ""
+    else:
+        prod_co = prod_co[0]
+
     sypnosis = data[0]["sypnosis"]
+    if not sypnosis:
+        sypnosis = ""
+    else:
+        sypnosis = sypnosis[0]
     broadcast_date = data[0]["broadcast_date"][1]
     title = data[0]["title"]
+    if not title:
+        title = ""
+    else:
+        title = title[0]
     f = open('./imdb/movie_url.txt')
     imdb_url = f.read()
-    return casts[:-1], prod_co[0], sypnosis[0], broadcast_date, title[0], imdb_url
+    return casts, prod_co, sypnosis, broadcast_date, title, imdb_url
 
 if __name__ == '__main__':
     app.run(debug=True)
