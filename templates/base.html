@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
     {% block head %}
-    <title>{% block title %}{% endblock %} - My Webpage</title>
+    {% endblock %}
     <!-- Bootstrap -->
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
     <!-- My own styles -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    {% endblock %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
   </head>
   
   <body>
