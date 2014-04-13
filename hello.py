@@ -80,4 +80,4 @@ def read_metadata(movie_title):
     return casts, prod_co, sypnosis, broadcast_date, title, imdb_url
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
