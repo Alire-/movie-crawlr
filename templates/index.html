@@ -3,11 +3,10 @@
 {% block head %}{% endblock %}
 {% block content %}
   <h1>Hello!</h1>
-  <form role="form">
+  <form role="form" name="search" action="/search" method="GET">
     <div class="form-group">
       <label for="searchMovieName">Movie title</label>
-      <input type="text" class="form-control"
-	     placeholder="eg. The Best Exotic Marigold Hotel">
+      <input type="text" class="form-control" name="movie_title" placeholder="eg. The Best Exotic Marigold Hotel">
       <span class="help-block">Enter the exact title of a movie to get it's meta-data.</span>
     </div>
     <button type="submit" class="btn btn-default">Search</button>
