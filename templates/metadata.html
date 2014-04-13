@@ -2,37 +2,41 @@
 {% block title %}Movie-crawlr | meta-data: {{ movie_title }}{% endblock %}
 {% block head %}{% endblock %}
 {% block content %}
-  <div class="table-responsive">
-    <table class="table">
-      <thead>
-	<tr>
-	  <th>Movie Title</th>
-	  <th>{{ movie_title }}</th>
-	</tr>
-      </thead>
-      <tbody>
-	<tr>
-	  <td>Sypnosis</td>
-	  <td>{{ sypnosis }}</td>
-	</tr>
-	<tr>
-	  <td>Casts</td>
-	  <td>{{ casts }}</td>
-	</tr>
-	<tr>
-	  <td>Broadcast date</td>
-	  <td>{{ broadcast_date }}</td>
-	</tr>
-	<tr>
-	  <td>Production Company</td>
-	  <td>{{ prod_co }}</td>
-	</tr>
-	<tr>
-	  <td>IMDb link</td>
-	  <td><a href="{{ imdb_link}}">{{ imdb_link }}</a></td>
-	</tr>
-      </tbody>
-    </table>
+  <div class="row">
+    <div class="col-md-8">
+      <div class="table-responsive">
+	<table class="table">
+	  <thead>
+	    <tr>
+	      <th>Movie Title</th>
+	      <th>{{ movie_title }}</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr>
+	      <td>Sypnosis</td>
+	      <td>{{ sypnosis }}</td>
+	    </tr>
+	    <tr>
+	      <td>Casts</td>
+	      <td>{{ casts }}</td>
+	    </tr>
+	    <tr>
+	      <td>Broadcast date</td>
+	      <td>{{ broadcast_date }}</td>
+	    </tr>
+	    <tr>
+	      <td>Production Company</td>
+	      <td>{{ prod_co }}</td>
+	    </tr>
+	    <tr>
+	      <td>IMDb link</td>
+	      <td><a href="{{ imdb_link }}">{{ imdb_link }}</a></td>
+	    </tr>
+	  </tbody>
+	</table>
+      </div>
+    </div>
   </div>
   <div class="row">
     <div class="col-md-5">

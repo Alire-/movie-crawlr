@@ -23,4 +23,4 @@ def process_search_query():
                            casts=casts, prod_co=prod_co, imdb_link=imdb_url)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
