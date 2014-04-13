@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block head %}
+    <title>{% block title %}{% endblock %} - My Webpage</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <!-- My own styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    {% endblock %}
+  </head>
+  
+  <body>
+    <div id="wrap">
+      <div class="container">
+	<div>
+	  {% block content %}
+	  {% endblock %}
+	</div>
+      </div>
+    </div>
+    <div id="footer">
+      <div class="container">
+	<p class="text-muted credit"><small>&copy; 2014 Stacey Tay</small></p>
+      </div>
+    </div>
+  </body>
+</html>
