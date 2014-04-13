@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Movie-crawlr | 500{% endblock %}
+{% block head %}{% endblock %}
+{% block content %}
+<div class="row">
+  <div class="col-md-5">
+    <h1>Oops!</h1>
+    <img src="http://www.visualphotos.com/photo/2x4061194/surprised_looking_dog_42-19550363.jpg" class="img-responsive img-rounded" id="img-movie-not-found" alt="Responsive image">
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-5">
+  <p class="bg-danger">Looks like something unexpected happened while we were getting your movie metadata for you.</p>
+    <form role="form" id="form-movie-not-found" name="search" action="/search" method="GET">
+      <div class="form-group">
+	<label for="searchMovieName">Try again?</label>
+	<input type="text" class="form-control" name="movie_title"
+	       placeholder="eg. The Godfather">
+	<span class="help-block">Maybe try another movie or TV series.</span>
+      </div>
+      <button type="submit" class="btn btn-default">Search</button>
+    </form>
+  </div>
+</div>
+{% endblock %}
