@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Meta-data: {{ movie_title }}{% endblock %}
+{% block head %}{% endblock %}
+{% block content %}
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+	<tr>
+	  <th>Movie Title</th>
+	  <th>{{ movie_title }}</th>
+	</tr>
+      </thead>
+      <tbody>
+	<tr>
+	  <td>Sypnosis</td>
+	  <td>{{ sypnosis }}</td>
+	</tr>
+	<tr>
+	  <td>Casts</td>
+	  <td>{{ casts }}</td>
+	</tr>
+	<tr>
+	  <td>Broadcast date</td>
+	  <td>{{ broadcast_date }}</td>
+	</tr>
+	<tr>
+	  <td>Production Company</td>
+	  <td>{{ prod_co }}</td>
+	</tr>
+      </tbody>
+    </table>
+  </div>
+{% endblock %}
