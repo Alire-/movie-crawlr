@@ -17,7 +17,7 @@ def process_search_query():
     print "MOVIE TITLE", movie_title
     if not crawl_for_movie(movie_title):
         return render_template('movienotfound.html')        
-    prod_co, sypnosis, broadcast_date, title, imdb_url = read_metadata(movie_title)
+    casts, prod_co, sypnosis, broadcast_date, title, imdb_url = read_metadata(movie_title)
     return render_template('metadata.html', movie_title=title,
                            sypnosis=sypnosis, broadcast_date=broadcast_date,
                            casts=casts, prod_co=prod_co, imdb_link=imdb_url)
