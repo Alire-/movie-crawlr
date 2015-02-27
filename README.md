@@ -1,11 +1,10 @@
 Movie-crawlr
 ============
 
-A web application that returns a movie's or TV series' IMDb etadata given its title. Built this to learn and gain familiarity with [Scrapy](http://scrapy.org), [Flask](http://flask.pocoo.org), and [Heroku](https://www.heroku.com).
+A web application that returns a movie's or TV series' IMDb metadata given its title. Built this to learn and gain familiarity with [Scrapy](http://scrapy.org), [Flask](http://flask.pocoo.org), and [Heroku](https://www.heroku.com). I built this in a weekend in April 2014 to experiement with the above technologies for the very first time, so it's very rough. Check out how I [parsed](https://github.com/staceytay/movie-crawlr/blob/master/get_imdb_url.sh) JSON then if you dare.
 
 [http://movie-crawlr.herokuapp.com](http://movie-crawlr.herokuapp.com)
 
-## How it works
 ## References
 * [Getting Started with Python on Heroku](https://devcenter.heroku.com/articles/getting-started-with-python)
 * [Scrapy Tutorial](http://doc.scrapy.org/en/latest/intro/tutorial.html)
@@ -15,9 +14,6 @@ A web application that returns a movie's or TV series' IMDb etadata given its ti
 * [Google Python Style Guide](http://google-styleguide.googlecode.com/svn/trunk/pyguide.html)
 * [XPath](http://www.w3.org/TR/xpath/)
 * [The Open Movie Database API](http://www.omdbapi.com/) - used this to get IMDb's movie id for queried movies.
-
-## Potential add-ons
-* Display a twitter stream with the search query as input, along with the movie metadata.
 
 ## Problems and bugs encountered
 1. Could not install Scrapy in `virtualenv`  
